@@ -1,0 +1,17 @@
+\section{Problem Definition}
+\label{sec:MAMT:prb_def}
+
+In this section, we will mathematically define our problem setting.  
+We start off by formally defining our notation. 
+For a matrix $Z \in \mathbb{R}^{m \times n}$, $Z^\top$ denotes its transpose, and $Z^{-1}$ denotes its (pseudo)inverse. 
+We also use entry-wise norms denoted by $\|Z\|_p$, where $p=2$ gives (Frobenius norm) $\| Z \|_F^2 = \sum_{ij}z^2_{i,j} = \mathrm{tr}(Z^\top Z)$, and $p=(2,1)$ gives the $\ell_{2,1}$ norm $\|Z\|_{2,1} =  \sum_{i=1}^{m}\|z^2_{i,:}\|$ where $z_{i,:}$ denotes the $i$th row of $Z$. 
+For a vector $(w_1,...,w_m) \in \mathbb{R}^{m\times1}$, $\mathrm{diag}(w_1,...,w_m) \in \mathbb{R}^{m \times m}$ denotes a diagonal matrix with $w_1,...,w_m$ as its diagonal entries. Let $\mathbb{I}_m$ denote an identity matrix of dimension $m \times m$. 
+
+
+Let $\textbf{X} = [x_1, x_2, ..., x_n] \in \mathbb{R}^{m \times n}$ where $x_i$ represents a sample ($m \times 1$ vector) at a certain timestamp in a time series feature space, and $\textbf{f} = [f_1, f_2, ..., f_m]$ be the set of features.  On a fleet level analytics, $\textbf{X}$ may involve samples from a few assets. And the feature set may not only include the raw sensors output, but also the transformed time series features, which could be created by sliding-window-based methods like mean, variance and auto-correlation. We will further discuss the ways of time series feature transformation in Section \ref{sec:MAMT:experiment}. 
+
+Now consider we have one event asset and the event time is already known. With certain domain knowledge, we can confidently assume that the fault appears no earlier than $a$ timestamp samples right before the failure.  Without loss of generality, let $\textbf{X}_\textbf{a} = [x_1, x_2, ..., x_{a}] \in \mathbb{R}^{m \times a}$ represent the $a$ timestamp samples right before the failure,  and $\textbf{X}_\textbf{b} = [x_{a+1}, x_{a+2}, ..., x_{a+b}] \in \mathbb{R}^{m \times b}$ represent all the other samples we consider as normal and irrelevant to the failure, and usually $b \gg a$. We denote $\textbf{X} = [\textbf{X}_\textbf{a}, \textbf{X}_\textbf{b}] \in \mathbb{R}^{m \times n}$ where $n = a+b$. The output we expect is a feature score vector $\textbf{W} \in \mathbb{R}^{m \times 1}$, and a instance score vector $\textbf{Y}_\textbf{a} \in \mathbb{R}^{1 \times a}$, where each element represents the contribution of the feature/instance to the fault. The larger the value is, the more relevant the feature/instance is to the fault.   
+
+
+
+

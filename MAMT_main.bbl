@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{feng2012adaptive}
+Yinfu Feng, Jun Xiao, Yueting Zhuang, and Xiaoming Liu.
+\newblock Adaptive unsupervised multi-view feature selection for visual concept
+  recognition.
+\newblock In {\em Asian Conference on Computer Vision}, pages 343--357.
+  Springer, 2012.
+
+\bibitem{frenay2014estimating}
+Beno{\'\i}t Fr{\'e}nay, Gauthier Doquire, and Michel Verleysen.
+\newblock Estimating mutual information for feature selection in the presence
+  of label noise.
+\newblock {\em Computational Statistics \& Data Analysis}, 71:832--848, 2014.
+
+\bibitem{liu2009multi}
+Jun Liu, Shuiwang Ji, and Jieping Ye.
+\newblock Multi-task feature learning via efficient l 2, 1-norm minimization.
+\newblock In {\em Proceedings of the twenty-fifth conference on uncertainty in
+  artificial intelligence}, pages 339--348. AUAI Press, 2009.
+
+\bibitem{nie2010general}
+Feiping Nie, Shiming Xiang, Yun Liu, and Changshui Zhang.
+\newblock A general graph-based semi-supervised learning with novel class
+  discovery.
+\newblock {\em Neural Computing and Applications}, 19(4):549--555, 2010.
+
+\bibitem{tang2013coselect}
+Jiliang Tang and Huan Liu.
+\newblock Coselect: Feature selection with instance selection for social media
+  data.
+\newblock In {\em Proceedings of the 2013 SIAM International Conference on Data
+  Mining}, pages 695--703. SIAM, 2013.
+
+\bibitem{wang2008graph}
+Jun Wang, Tony Jebara, and Shih-Fu Chang.
+\newblock Graph transduction via alternating minimization.
+\newblock In {\em Proceedings of the 25th international conference on Machine
+  learning}, pages 1144--1151. ACM, 2008.
+
+\end{thebibliography}
